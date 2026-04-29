@@ -80,7 +80,7 @@
 
     <div class="font-medium text-sm text-gray-500">
       <a href="https://www.reddit.com/user/ruxh_alt" target="_blank"
-        class="hover:text-orange-500 transition-colors flex items-center gap-2">
+        class="hover:text-blue-600 transition-colors flex items-center gap-2">
         <span class="hidden sm:inline">Made by ruxh_alt</span>
         <i data-lucide="user" class="w-4 h-4"></i>
       </a>
@@ -90,67 +90,95 @@
   <main class="max-w-4xl mx-auto pt-28 px-4 pb-16 w-full flex-1 z-10 relative">
 
     <div id="landing-view" class="fade-in-up">
-      <div class="text-center mb-10">
+      <div class="text-center mb-8">
         <h1 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4 tracking-tight">Calculate Your Score.</h1>
-        <p class="text-gray-500 text-lg">Paste your Answer Key and upload your Response Sheets to instantly calculate
-          marks.</p>
+        <p class="text-gray-500 text-lg">Upload your NCET 2026 response sheets to instantly calculate your marks.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-10 flex items-start gap-3 shadow-sm">
+        <i data-lucide="info" class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0"></i>
+        <div class="text-sm text-amber-800 leading-relaxed">
+          <strong class="font-semibold block mb-1 text-base">Current Limitations:</strong>
+          Currently, this calculator only supports <strong>English Language (1 & 2)</strong> and <strong>PCM (Physics,
+            Chemistry, Mathematics)</strong>. If you want your regional language or other subjects added, please DM the
+          official answer keys to <a href="https://www.reddit.com/user/ruxh_alt" target="_blank"
+            class="font-bold underline hover:text-amber-900 transition-colors">my Reddit</a> so I can add them!
+        </div>
+      </div>
 
+      <div class="grid sm:grid-cols-2 gap-6 mb-10">
         <div
-          class="card rounded-2xl p-8 relative overflow-hidden flex flex-col h-full hover:border-orange-200 hover:shadow-md transition-all duration-300">
-          <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-            <span
-              class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-sm">1</span>
-            Answer Key
-          </h3>
-          <p class="text-sm text-gray-500 mb-4 flex-1">Copy the table directly from the NTA website and paste it here.
-          </p>
+          class="card p-6 rounded-2xl flex flex-col hover:border-blue-200 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+          <div
+            class="w-12 h-12 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4 text-blue-600">
+            <i data-lucide="download" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-semibold text-gray-900 text-lg mb-2">1. Download PDFs</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Log in to the official portal and download all 8 response
+            sheet PDFs for each subject separately.</p>
+        </div>
+        <div
+          class="card p-6 rounded-2xl flex flex-col hover:border-blue-200 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+          <div
+            class="w-12 h-12 rounded-full bg-green-50 border border-green-100 flex items-center justify-center mb-4 text-green-600">
+            <i data-lucide="upload" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-semibold text-gray-900 text-lg mb-2">2. Upload Files</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Select your shift and drop all 8 of your PDF files into the
+            vault below.</p>
+        </div>
+      </div>
 
-          <textarea id="key-input"
-            placeholder="Paste Answer Key text here...&#10;&#10;Question_ID  Correct_Option&#10;12722        2&#10;12723        4"
-            class="w-full h-40 bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-4 text-sm text-gray-700 font-mono focus:outline-none focus:border-orange-400 focus:bg-orange-50 transition-colors resize-none custom-scrollbar"></textarea>
+      <div class="card rounded-2xl p-8 relative overflow-hidden group">
+
+        <div class="mb-6">
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Select Your Exam Shift</label>
+          <select id="shift-select"
+            class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm cursor-pointer hover:border-blue-300 appearance-none">
+            <option value="17s1">17th April - Shift 1 (Morning)</option>
+            <option value="17s2">17th April - Shift 2 (Evening)</option>
+            <option value="18s1">18th April - Shift 1 (Morning)</option>
+          </select>
         </div>
 
-        <div
-          class="card rounded-2xl p-8 relative overflow-hidden flex flex-col h-full hover:border-blue-200 hover:shadow-md transition-all duration-300">
-          <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-            <span
-              class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm">2</span>
-            Response Sheets
-          </h3>
-          <p class="text-sm text-gray-500 mb-4 flex-1">Select all 8 of your individual subject response PDFs.</p>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-gray-400"></i> Drop Response Sheets
+        </h3>
 
-          <div id="pdf-dropzone"
-            class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 cursor-pointer relative bg-gray-50 flex-1 flex flex-col items-center justify-center min-h-[160px]">
-            <input type="file" id="pdf-input" multiple accept=".pdf"
-              class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
-            <i data-lucide="files" class="w-8 h-8 mb-3 text-gray-400"></i>
-            <p class="text-sm font-medium text-gray-700">Select Responses</p>
-            <div id="pdf-status"
-              class="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-semibold hidden">
-              <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> <span id="pdf-count">0</span> files loaded
-            </div>
+        <div id="dropzone"
+          class="border-2 border-dashed border-gray-300 rounded-xl p-12 text-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 cursor-pointer relative bg-gray-50">
+          <input type="file" id="file-input" multiple accept=".pdf"
+            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+
+          <div
+            class="w-16 h-16 mx-auto mb-4 rounded-full bg-white flex items-center justify-center border border-gray-200 shadow-sm group-hover:scale-110 group-hover:text-blue-600 transition-all duration-300">
+            <i data-lucide="cloud-upload" class="w-8 h-8 text-gray-400 group-hover:text-blue-500 transition-colors"></i>
+          </div>
+
+          <p class="text-lg font-medium text-gray-700">Drag & drop or click to browse</p>
+          <p class="text-sm text-gray-500 mt-2">Select all 8 NCET PDFs</p>
+
+          <div id="file-status"
+            class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 border border-green-200 text-green-700 text-sm font-semibold hidden">
+            <i data-lucide="check-circle-2" class="w-4 h-4"></i> <span id="file-count">0</span> files queued
           </div>
         </div>
 
-      </div>
+        <button id="calculate-btn"
+          class="mt-6 w-full bg-gray-900 text-white hover:bg-gray-800 font-bold py-4 rounded-xl transition-all duration-300 hidden flex justify-center items-center gap-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-lg">
+          Initialize Calculation <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </button>
 
-      <button id="calculate-btn"
-        class="w-full bg-gray-900 text-white hover:bg-gray-800 font-bold py-4 rounded-xl transition-all duration-300 opacity-50 cursor-not-allowed flex justify-center items-center gap-2 shadow-md text-lg"
-        disabled>
-        Initialize Calculation <i data-lucide="arrow-right" class="w-5 h-5"></i>
-      </button>
-
-      <div id="loading"
-        class="hidden mt-6 flex justify-center items-center gap-3 text-sm font-medium text-gray-600 bg-gray-50 py-4 rounded-xl border border-gray-200">
-        <i data-lucide="loader-2" class="w-5 h-5 animate-spin text-blue-600"></i>
-        <span class="animate-pulse">Parsing matrices... this may take a moment.</span>
+        <div id="loading"
+          class="hidden mt-6 flex justify-center items-center gap-3 text-sm font-medium text-gray-600 bg-gray-50 py-4 rounded-xl border border-gray-200">
+          <i data-lucide="loader-2" class="w-5 h-5 animate-spin text-blue-600"></i>
+          <span class="animate-pulse">Parsing responses...</span>
+        </div>
       </div>
     </div>
 
     <div id="results-view" class="hidden flex-col gap-6">
+
       <div class="card rounded-3xl p-10 text-center relative overflow-hidden fade-in-up" style="animation-delay: 0.1s;">
         <h2 class="text-gray-500 font-semibold mb-4 uppercase tracking-[0.2em] text-sm">Final Computed Score</h2>
         <div id="final-score" class="text-8xl sm:text-9xl font-black text-gray-900 mb-8 tracking-tighter">0</div>
@@ -228,60 +256,46 @@
   <script>
     lucide.createIcons();
 
-    const keyInput = document.getElementById('key-input');
-    const pdfInput = document.getElementById('pdf-input');
+    const fileInput = document.getElementById('file-input');
+    const shiftSelect = document.getElementById('shift-select');
     const calculateBtn = document.getElementById('calculate-btn');
+    const dropzone = document.getElementById('dropzone');
+    const fileStatus = document.getElementById('file-status');
+    const fileCountSpan = document.getElementById('file-count');
 
-    const pdfDropzone = document.getElementById('pdf-dropzone');
-    const pdfStatus = document.getElementById('pdf-status');
-    const pdfCount = document.getElementById('pdf-count');
-
-    // Enable button only when BOTH text is pasted and PDFs are selected
-    function checkInputs() {
-      if (keyInput.value.trim().length > 10 && pdfInput.files.length > 0) {
-        calculateBtn.disabled = false;
-        calculateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-        calculateBtn.classList.add('hover:-translate-y-0.5');
-      } else {
-        calculateBtn.disabled = true;
-        calculateBtn.classList.add('opacity-50', 'cursor-not-allowed');
-        calculateBtn.classList.remove('hover:-translate-y-0.5');
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length > 0) {
+        fileCountSpan.textContent = fileInput.files.length;
+        fileStatus.classList.remove('hidden');
+        dropzone.classList.add('border-blue-300', 'bg-blue-50');
+        dropzone.classList.remove('bg-gray-50');
+        calculateBtn.classList.remove('hidden');
+        calculateBtn.classList.add('animate-[fadeInUp_0.3s_ease-out_forwards]');
       }
-    }
-
-    keyInput.addEventListener('input', checkInputs);
-
-    pdfInput.addEventListener('change', () => {
-      if (pdfInput.files.length > 0) {
-        pdfCount.textContent = pdfInput.files.length;
-        pdfStatus.classList.remove('hidden');
-        pdfDropzone.classList.add('border-blue-400', 'bg-blue-50');
-        pdfDropzone.classList.remove('bg-gray-50');
-      } else {
-        pdfStatus.classList.add('hidden');
-        pdfDropzone.classList.remove('border-blue-400', 'bg-blue-50');
-        pdfDropzone.classList.add('bg-gray-50');
-      }
-      checkInputs();
     });
 
     calculateBtn.addEventListener('click', async () => {
-      if (keyInput.value.trim().length === 0 || pdfInput.files.length === 0) return;
+      if (fileInput.files.length === 0) return;
 
       calculateBtn.classList.add('hidden');
       document.getElementById('loading').classList.remove('hidden');
 
       const formData = new FormData();
-      formData.append('answer_key_text', keyInput.value);
+      formData.append('shift', shiftSelect.value); // Append selected shift
 
-      for (const file of pdfInput.files) {
+      for (const file of fileInput.files) {
         formData.append('files[]', file);
       }
 
       try {
         const response = await fetch('/upload', { method: 'POST', body: formData });
-        const data = await response.json();
 
+        // Render 502/Timeout handling
+        if (!response.ok) {
+          throw new Error("The server ran out of memory or timed out. Please refresh and try uploading 2 or 3 PDFs at a time!");
+        }
+
+        const data = await response.json();
         if (data.error) throw new Error(data.error);
 
         populateResults(data);
@@ -293,7 +307,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
       } catch (error) {
-        alert("Error: " + error.message);
+        alert(error.message);
         document.getElementById('loading').classList.add('hidden');
         calculateBtn.classList.remove('hidden');
       }
@@ -320,7 +334,6 @@
       data.questions.forEach(q => {
         const tr = document.createElement('tr');
         tr.className = "hover:bg-gray-50 transition-colors duration-200 group";
-        tr.dataset.official = q.official_answer;
 
         let statusHtml = getStatusBadgeHtml(q.status);
         let isAttempted = q.candidate_answer !== 'Not Attempted' ? 'Yes' : 'No';
