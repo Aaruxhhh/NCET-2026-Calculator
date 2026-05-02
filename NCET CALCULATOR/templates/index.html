@@ -30,23 +30,10 @@
       border-bottom: 1px solid #f3f4f6;
     }
 
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #f9fafb;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #d1d5db;
-      border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #9ca3af;
-    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #f9fafb; }
+    ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
 
     .fade-in-up {
       animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -55,10 +42,7 @@
     }
 
     @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -66,21 +50,16 @@
 <body class="antialiased min-h-screen flex flex-col relative">
 
   <header class="fixed top-0 w-full h-16 flex items-center justify-between px-4 sm:px-8 z-50 clean-header">
-    <div
-      class="font-bold text-xl tracking-tight flex items-center gap-2 cursor-pointer text-gray-900 hover:text-blue-600 transition-colors"
-      onclick="location.reload()">
-      <div class="p-1.5 rounded-lg bg-gray-50 border border-gray-200"><i data-lucide="calculator"
-          class="w-5 h-5 text-blue-600"></i></div>
+    <div class="font-bold text-xl tracking-tight flex items-center gap-2 cursor-pointer text-gray-900 hover:text-blue-600 transition-colors" onclick="location.reload()">
+      <div class="p-1.5 rounded-lg bg-gray-50 border border-gray-200"><i data-lucide="calculator" class="w-5 h-5 text-blue-600"></i></div>
     </div>
 
-    <div
-      class="font-semibold text-lg sm:text-xl text-gray-900 absolute left-1/2 transform -translate-x-1/2 whitespace-nowrap tracking-wide">
+    <div class="font-semibold text-lg sm:text-xl text-gray-900 absolute left-1/2 transform -translate-x-1/2 whitespace-nowrap tracking-wide">
       NCET 2026 Calculator
     </div>
 
     <div class="font-medium text-sm text-gray-500">
-      <a href="https://www.reddit.com/user/ruxh_alt" target="_blank"
-        class="hover:text-blue-600 transition-colors flex items-center gap-2">
+      <a href="https://www.reddit.com/user/ruxh_alt" target="_blank" class="hover:text-blue-600 transition-colors flex items-center gap-2">
         <span class="hidden sm:inline">Made by ruxh_alt</span>
         <i data-lucide="user" class="w-4 h-4"></i>
       </a>
@@ -95,88 +74,78 @@
         <p class="text-gray-500 text-lg">Upload your NCET 2026 response sheets to instantly calculate your marks.</p>
       </div>
 
+      <!-- NEW DISCLAIMER BANNER -->
       <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-10 flex items-start gap-3 shadow-sm">
         <i data-lucide="info" class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0"></i>
         <div class="text-sm text-amber-800 leading-relaxed">
-          <strong class="font-semibold block mb-1 text-base">Current Limitations:</strong>
-          Currently, this calculator only supports <strong>English Language (1 & 2)</strong> and <strong>PCM (Physics,
-            Chemistry, Mathematics)</strong>. If you want your regional language or other subjects added, please DM the
-          official answer keys to <a href="https://www.reddit.com/user/ruxh_alt" target="_blank"
-            class="font-bold underline hover:text-amber-900 transition-colors">my Reddit</a> so I can add them!
+            <strong class="font-semibold block mb-1 text-base">Current Limitations:</strong>
+            This automated calculator currently only supports <strong>English Language (1 & 2)</strong> and <strong>PCM (Physics, Chemistry, Mathematics)</strong>. If you need to calculate marks for regional languages or other subject combinations, please <a href="https://rawalaarush-ncetcalculator.hf.space/" target="_blank" class="font-bold underline hover:text-amber-900 transition-colors">use the Universal Calculator here</a> (which allows you to paste your own answer keys).
         </div>
       </div>
 
       <div class="grid sm:grid-cols-2 gap-6 mb-10">
-        <div
-          class="card p-6 rounded-2xl flex flex-col hover:border-blue-200 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
-          <div
-            class="w-12 h-12 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4 text-blue-600">
+        <div class="card p-6 rounded-2xl flex flex-col hover:border-blue-200 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4 text-blue-600">
             <i data-lucide="download" class="w-6 h-6"></i>
           </div>
           <h3 class="font-semibold text-gray-900 text-lg mb-2">1. Download PDFs</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Log in to the official portal and download all 8 response
-            sheet PDFs for each subject separately.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Log in to the official portal and download all 8 response sheet PDFs for each subject separately.</p>
         </div>
-        <div
-          class="card p-6 rounded-2xl flex flex-col hover:border-blue-200 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
-          <div
-            class="w-12 h-12 rounded-full bg-green-50 border border-green-100 flex items-center justify-center mb-4 text-green-600">
+        <div class="card p-6 rounded-2xl flex flex-col hover:border-blue-200 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-full bg-green-50 border border-green-100 flex items-center justify-center mb-4 text-green-600">
             <i data-lucide="upload" class="w-6 h-6"></i>
           </div>
           <h3 class="font-semibold text-gray-900 text-lg mb-2">2. Upload Files</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Select your shift and drop all 8 of your PDF files into the
-            vault below.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Select your shift and drop all 8 of your PDF files into the vault below.</p>
         </div>
       </div>
 
+      <!-- Upload Card -->
       <div class="card rounded-2xl p-8 relative overflow-hidden group">
-
+        
+        <!-- Shift Selector -->
         <div class="mb-6">
-          <label class="block text-sm font-semibold text-gray-700 mb-2">Select Your Exam Shift</label>
-          <select id="shift-select"
-            class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm cursor-pointer hover:border-blue-300 appearance-none">
-            <option value="17s1">17th April - Shift 1 (Morning)</option>
-            <option value="17s2">17th April - Shift 2 (Evening)</option>
-            <option value="18s1">18th April - Shift 1 (Morning)</option>
-          </select>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Select Your Exam Shift</label>
+            <select id="shift-select" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm cursor-pointer hover:border-blue-300 appearance-none">
+                <option value="17s1">17th April - Shift 1 (Morning)</option>
+                <option value="17s2">17th April - Shift 2 (Evening)</option>
+                <option value="18s1">18th April - Shift 1 (Morning)</option>
+            </select>
         </div>
 
         <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <i data-lucide="file-text" class="w-5 h-5 text-gray-400"></i> Drop Response Sheets
         </h3>
 
-        <div id="dropzone"
-          class="border-2 border-dashed border-gray-300 rounded-xl p-12 text-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 cursor-pointer relative bg-gray-50">
-          <input type="file" id="file-input" multiple accept=".pdf"
-            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
-
-          <div
-            class="w-16 h-16 mx-auto mb-4 rounded-full bg-white flex items-center justify-center border border-gray-200 shadow-sm group-hover:scale-110 group-hover:text-blue-600 transition-all duration-300">
+        <div id="dropzone" class="border-2 border-dashed border-gray-300 rounded-xl p-12 text-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 cursor-pointer relative bg-gray-50">
+          <input type="file" id="file-input" multiple accept=".pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+          
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white flex items-center justify-center border border-gray-200 shadow-sm group-hover:scale-110 group-hover:text-blue-600 transition-all duration-300">
             <i data-lucide="cloud-upload" class="w-8 h-8 text-gray-400 group-hover:text-blue-500 transition-colors"></i>
           </div>
-
+          
           <p class="text-lg font-medium text-gray-700">Drag & drop or click to browse</p>
           <p class="text-sm text-gray-500 mt-2">Select all 8 NCET PDFs</p>
-
-          <div id="file-status"
-            class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 border border-green-200 text-green-700 text-sm font-semibold hidden">
+          
+          <div id="file-status" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 border border-green-200 text-green-700 text-sm font-semibold hidden">
             <i data-lucide="check-circle-2" class="w-4 h-4"></i> <span id="file-count">0</span> files queued
           </div>
         </div>
 
-        <button id="calculate-btn"
-          class="mt-6 w-full bg-gray-900 text-white hover:bg-gray-800 font-bold py-4 rounded-xl transition-all duration-300 hidden flex justify-center items-center gap-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-lg">
+        <button id="calculate-btn" class="mt-6 w-full bg-gray-900 text-white hover:bg-gray-800 font-bold py-4 rounded-xl transition-all duration-300 hidden flex justify-center items-center gap-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-lg">
           Initialize Calculation <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </button>
 
-        <div id="loading"
-          class="hidden mt-6 flex justify-center items-center gap-3 text-sm font-medium text-gray-600 bg-gray-50 py-4 rounded-xl border border-gray-200">
-          <i data-lucide="loader-2" class="w-5 h-5 animate-spin text-blue-600"></i>
+        <div id="loading" class="hidden mt-6 flex justify-center items-center gap-3 text-sm font-medium text-gray-600 bg-gray-50 py-4 rounded-xl border border-gray-200">
+          <i data-lucide="loader-2" class="w-5 h-5 animate-spin text-blue-600"></i> 
           <span class="animate-pulse">Parsing responses...</span>
         </div>
       </div>
     </div>
 
+    <!-- ========================================== -->
+    <!-- RESULTS VIEW (Hidden by default)           -->
+    <!-- ========================================== -->
     <div id="results-view" class="hidden flex-col gap-6">
 
       <div class="card rounded-3xl p-10 text-center relative overflow-hidden fade-in-up" style="animation-delay: 0.1s;">
@@ -185,11 +154,11 @@
 
         <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm font-medium">
           <div class="bg-gray-50 border border-gray-200 px-6 py-3 rounded-xl flex items-center gap-2">
-            <span class="text-gray-500">Attempted:</span>
+            <span class="text-gray-500">Attempted:</span> 
             <span id="stat-attempted" class="text-gray-900 font-bold text-lg">0</span>
           </div>
           <div class="bg-gray-50 border border-gray-200 px-6 py-3 rounded-xl flex items-center gap-2">
-            <span class="text-gray-500">Accuracy:</span>
+            <span class="text-gray-500">Accuracy:</span> 
             <span id="stat-accuracy" class="text-gray-900 font-bold text-lg">0%</span>
           </div>
         </div>
@@ -215,10 +184,8 @@
       </div>
 
       <div class="card rounded-2xl overflow-hidden mt-4 fade-in-up" style="animation-delay: 0.3s;">
-        <div
-          class="p-6 border-b border-gray-200 bg-gray-50 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <h2 class="text-xl font-bold text-gray-900 flex items-center gap-2"><i data-lucide="list"
-              class="w-5 h-5 text-gray-500"></i> Response Matrix</h2>
+        <div class="p-6 border-b border-gray-200 bg-gray-50 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <h2 class="text-xl font-bold text-gray-900 flex items-center gap-2"><i data-lucide="list" class="w-5 h-5 text-gray-500"></i> Response Matrix</h2>
         </div>
         <div class="overflow-x-auto max-h-[600px] custom-scrollbar">
           <table class="w-full text-left border-collapse text-sm whitespace-nowrap" id="results-table">
@@ -232,14 +199,14 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-100 text-gray-700 bg-white">
+              <!-- Rows injected via JS -->
             </tbody>
           </table>
         </div>
       </div>
 
       <div class="mt-6 text-center fade-in-up" style="animation-delay: 0.4s;">
-        <button onclick="location.reload()"
-          class="px-8 py-3.5 bg-white border border-gray-200 text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition-all duration-300 inline-flex items-center gap-2 shadow-sm hover:shadow-md">
+        <button onclick="location.reload()" class="px-8 py-3.5 bg-white border border-gray-200 text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition-all duration-300 inline-flex items-center gap-2 shadow-sm hover:shadow-md">
           <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Process Another Batch
         </button>
       </div>
@@ -247,8 +214,7 @@
   </main>
 
   <footer class="mt-auto py-6 text-center border-t border-gray-200 bg-white">
-    <a href="https://github.com/Aaruxhhh" target="_blank"
-      class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-blue-600 transition-colors font-medium">
+    <a href="https://github.com/Aaruxhhh" target="_blank" class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-blue-600 transition-colors font-medium">
       <i data-lucide="github" class="w-4 h-4"></i> View Source Code on GitHub
     </a>
   </footer>
@@ -282,17 +248,17 @@
 
       const formData = new FormData();
       formData.append('shift', shiftSelect.value); // Append selected shift
-
+      
       for (const file of fileInput.files) {
         formData.append('files[]', file);
       }
 
       try {
         const response = await fetch('/upload', { method: 'POST', body: formData });
-
+        
         // Render 502/Timeout handling
         if (!response.ok) {
-          throw new Error("The server ran out of memory or timed out. Please refresh and try uploading 2 or 3 PDFs at a time!");
+            throw new Error("The server ran out of memory or timed out. Please refresh and try uploading 2 or 3 PDFs at a time!");
         }
 
         const data = await response.json();
@@ -387,7 +353,7 @@
         if (progress < 1) {
           window.requestAnimationFrame(step);
         } else {
-          obj.innerHTML = end;
+          obj.innerHTML = end; 
         }
       };
       window.requestAnimationFrame(step);
